@@ -1,0 +1,30 @@
+//
+//  ROKOInstaBotCustomProperty.h
+//  ROKOMobi
+//
+//  Created by Igor Sova on 10/04/2017.
+//  Copyright © 2017 ROKO Labs. All rights reserved.
+//
+
+#import "IBDataItem.h"
+
+typedef  NS_ENUM(NSInteger, ROKOConversationFieldType) {
+	ROKOConversationFieldTypeString,
+	ROKOConversationFieldTypeInteger,
+	ROKOConversationFieldTypeDateTime
+};
+
+typedef  NS_ENUM(NSInteger, ROKOConversationValueFormat) {
+	ROKOConversationValueFormatUndefined,
+	ROKOConversationValueFormatEmailAddress,
+	ROKOConversationValueFormatPhoneNumber
+};
+
+@interface IBConversationCustomProperty : IBDataItem
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, assign) ROKOConversationFieldType fieldType;
+@property (nonatomic, assign) ROKOConversationValueFormat valueFormat;
+@property (nonatomic, assign) BOOL isList;
+
+@end

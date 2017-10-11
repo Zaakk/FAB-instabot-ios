@@ -20,6 +20,7 @@
 		119D85FDC7FBCAAD7E4A60F4B1C5AB63 /* Pods-FAB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FAB.modulemap"; sourceTree = "<group>"; };
 		1802E44F8DD2445AD425B59246FCA467 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DC3EC087ABA3DE6B4E914ABC19976F /* Pods-FAB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FAB-dummy.m"; sourceTree = "<group>"; };
+		292529B28D530C27A1A91E72CD816EA3 /* Instabot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabot.framework; sourceTree = "<group>"; };
 		38ABE27E75650A5587653F93668A0063 /* Pods-FAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FAB.debug.xcconfig"; sourceTree = "<group>"; };
 		46582634338836E63D07E7128647F750 /* Pods-FAB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FAB-umbrella.h"; sourceTree = "<group>"; };
 		50B081C1E48886D3E13E4063D2130D47 /* Pods-FABUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FABUITests-dummy.m"; sourceTree = "<group>"; };
@@ -33,12 +34,11 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9581A51F546B3F28786265FF2FBAEDBF /* Pods-FABUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FABUITests.modulemap"; sourceTree = "<group>"; };
 		9B4BB84F18B3C36BF07F19340222B360 /* Pods-FAB-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FAB-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5EBB939F4A7D4603CA4E84E6683A05C /* InstabotResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = InstabotResources.bundle; path = Instabot.framework/InstabotResources.bundle; sourceTree = "<group>"; };
 		AFFA0495B8DB187EC7BF034DD24D32A4 /* Pods_FAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FAB.framework; path = "Pods-FAB.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5828828C3508FE5344AE18B0193F466 /* Pods-FABUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FABUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BE3CE5D45950571184047CF98D474D98 /* Pods-FAB-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FAB-resources.sh"; sourceTree = "<group>"; };
 		D3B883A7AC8B5068064A10E53E273B0A /* Pods-FABUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FABUITests-resources.sh"; sourceTree = "<group>"; };
-		DC2C8F146784CAC128DDF4F718E7A291 /* ROKOMobi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ROKOMobi.framework; path = Framework/ROKOMobi.framework; sourceTree = "<group>"; };
-		DF6BF570288575DAFDCAEC5F67C597CF /* ROKOMobiResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ROKOMobiResources.bundle; path = Framework/ROKOMobi.framework/ROKOMobiResources.bundle; sourceTree = "<group>"; };
 		E303569DAD0BD5477E9DA38AC419E59A /* Pods-FABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FABUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F91EED6C6AD3F846F1D61EFCFD24E346 /* Pods_FABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FABUITests.framework; path = "Pods-FABUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2F3167C2D243A08E99C93BBA4A9652 /* Pods-FAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FAB.release.xcconfig"; sourceTree = "<group>"; };
@@ -64,20 +64,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09EA270C153D4280B7D945F051FD17AA /* Pods */ = {
+		11792CDC64D91F53CE2F07C3388D926E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F7A74FF08A9BDA546839F08DF70FE85D /* ROKO.Mobi */,
+				56FDB4E9822B9DE6326D31763A6A26F0 /* InstabotDaily */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		384CD68526D6A1E096D58EA3C565F648 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DF6BF570288575DAFDCAEC5F67C597CF /* ROKOMobiResources.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		485F9709438D3E47C36C2FA33742F319 /* Targets Support Files */ = {
@@ -89,12 +81,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4B24AE7C7DE0A764ED0F365FFC6FE6F4 /* Frameworks */ = {
+		56FDB4E9822B9DE6326D31763A6A26F0 /* InstabotDaily */ = {
 			isa = PBXGroup;
 			children = (
-				DC2C8F146784CAC128DDF4F718E7A291 /* ROKOMobi.framework */,
+				B354F9D39C72315864A25310920CDE9F /* Frameworks */,
+				8D6E584B8B7DFA7FC1D9D39FB31395E8 /* Resources */,
 			);
-			name = Frameworks;
+			name = InstabotDaily;
+			path = InstabotDaily;
 			sourceTree = "<group>";
 		};
 		78A0A1823F26F66D2F567701DFEC5540 /* Products */ = {
@@ -111,10 +105,18 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				09EA270C153D4280B7D945F051FD17AA /* Pods */,
+				11792CDC64D91F53CE2F07C3388D926E /* Pods */,
 				78A0A1823F26F66D2F567701DFEC5540 /* Products */,
 				485F9709438D3E47C36C2FA33742F319 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8D6E584B8B7DFA7FC1D9D39FB31395E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A5EBB939F4A7D4603CA4E84E6683A05C /* InstabotResources.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		8F107FD179651C50E5A9A1C835EEFA05 /* Pods-FABUITests */ = {
@@ -133,6 +135,14 @@
 			);
 			name = "Pods-FABUITests";
 			path = "Target Support Files/Pods-FABUITests";
+			sourceTree = "<group>";
+		};
+		B354F9D39C72315864A25310920CDE9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				292529B28D530C27A1A91E72CD816EA3 /* Instabot.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -167,16 +177,6 @@
 			);
 			name = "Pods-FAB";
 			path = "Target Support Files/Pods-FAB";
-			sourceTree = "<group>";
-		};
-		F7A74FF08A9BDA546839F08DF70FE85D /* ROKO.Mobi */ = {
-			isa = PBXGroup;
-			children = (
-				4B24AE7C7DE0A764ED0F365FFC6FE6F4 /* Frameworks */,
-				384CD68526D6A1E096D58EA3C565F648 /* Resources */,
-			);
-			name = ROKO.Mobi;
-			path = ROKO.Mobi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
