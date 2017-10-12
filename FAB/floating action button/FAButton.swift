@@ -17,6 +17,7 @@ enum FABPosition: NSInteger {
 }
 
 let kDefaultPaddingForButton:CGFloat = 15.0
+let kFABTapEventName = "FABTapped"
 
 class FAButton: UIButton {
     
@@ -25,10 +26,6 @@ class FAButton: UIButton {
     internal var position:FABPosition = .RightBottom
     
     private var buttonCenter = CGPoint.zero
-    
-    var didRotate: (Notification) -> Void = { notification in
-        
-    }
     
     init(width:CGFloat = 25.0, position:FABPosition = .RightBottom, draggable:Bool = true) {
         super.init(frame: generateFrame(position: position, width: width))
@@ -39,6 +36,8 @@ class FAButton: UIButton {
         self.position = position
         
         configureView()
+        
+        self.addTarget(self, action: #selector(self.tap), for: .touchUpInside)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,10 +46,15 @@ class FAButton: UIButton {
     
     private func configureView() {
         self.setTitle("I", for: .normal)
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(self.panButton(pan:)))
-        self.addGestureRecognizer(pan)
-        
         self.layer.cornerRadius = self.width / 2.0
+        if self.draggable {
+            let pan = UIPanGestureRecognizer(target: self, action: #selector(self.panButton(pan:)))
+            self.addGestureRecognizer(pan)
+        }
+    }
+    
+    @objc private func tap() {
+        NotificationCenter.default.post(name: Notification.Name(kFABTapEventName), object: self)
     }
     
     @objc private func panButton(pan: UIPanGestureRecognizer) {

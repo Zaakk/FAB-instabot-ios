@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		003F4986113F33D75F051797FE373289 /* Pods-FAB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46582634338836E63D07E7128647F750 /* Pods-FAB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23F1E7631F8F957100DF8ADF /* Instabot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 292529B28D530C27A1A91E72CD816EA3 /* Instabot.framework */; };
 		4076237EEFFC714D505E587B8211AC60 /* Pods-FABUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B081C1E48886D3E13E4063D2130D47 /* Pods-FABUITests-dummy.m */; };
 		5D6BA91C919C9351C828E3F42C390721 /* Pods-FAB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DC3EC087ABA3DE6B4E914ABC19976F /* Pods-FAB-dummy.m */; };
 		A0DD6400CE4C68A2D8922D63975DBD06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -17,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		0975F96ED739388D33B8D2284B0DA55B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		119D85FDC7FBCAAD7E4A60F4B1C5AB63 /* Pods-FAB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FAB.modulemap"; sourceTree = "<group>"; };
+		119D85FDC7FBCAAD7E4A60F4B1C5AB63 /* Pods-FAB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FAB.modulemap"; sourceTree = "<group>"; };
 		1802E44F8DD2445AD425B59246FCA467 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DC3EC087ABA3DE6B4E914ABC19976F /* Pods-FAB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FAB-dummy.m"; sourceTree = "<group>"; };
 		292529B28D530C27A1A91E72CD816EA3 /* Instabot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabot.framework; sourceTree = "<group>"; };
@@ -31,16 +32,16 @@
 		888529AA4DD6135EBC28C575501D1262 /* Pods-FAB-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FAB-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8B7A1F1C57C517F48DCA583FC10D0E02 /* Pods-FABUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FABUITests-umbrella.h"; sourceTree = "<group>"; };
 		8FF39ECA51013B5EB9CC4F4AEEF5103D /* Pods-FABUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FABUITests.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9581A51F546B3F28786265FF2FBAEDBF /* Pods-FABUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FABUITests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9581A51F546B3F28786265FF2FBAEDBF /* Pods-FABUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FABUITests.modulemap"; sourceTree = "<group>"; };
 		9B4BB84F18B3C36BF07F19340222B360 /* Pods-FAB-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FAB-acknowledgements.plist"; sourceTree = "<group>"; };
 		A5EBB939F4A7D4603CA4E84E6683A05C /* InstabotResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = InstabotResources.bundle; path = Instabot.framework/InstabotResources.bundle; sourceTree = "<group>"; };
-		AFFA0495B8DB187EC7BF034DD24D32A4 /* Pods_FAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FAB.framework; path = "Pods-FAB.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFFA0495B8DB187EC7BF034DD24D32A4 /* Pods_FAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5828828C3508FE5344AE18B0193F466 /* Pods-FABUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FABUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		BE3CE5D45950571184047CF98D474D98 /* Pods-FAB-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FAB-resources.sh"; sourceTree = "<group>"; };
 		D3B883A7AC8B5068064A10E53E273B0A /* Pods-FABUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FABUITests-resources.sh"; sourceTree = "<group>"; };
 		E303569DAD0BD5477E9DA38AC419E59A /* Pods-FABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FABUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		F91EED6C6AD3F846F1D61EFCFD24E346 /* Pods_FABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FABUITests.framework; path = "Pods-FABUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91EED6C6AD3F846F1D61EFCFD24E346 /* Pods_FABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FABUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2F3167C2D243A08E99C93BBA4A9652 /* Pods-FAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FAB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23F1E7631F8F957100DF8ADF /* Instabot.framework in Frameworks */,
 				B5182A1579592410B02336A9AF968301 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,7 +89,6 @@
 				B354F9D39C72315864A25310920CDE9F /* Frameworks */,
 				8D6E584B8B7DFA7FC1D9D39FB31395E8 /* Resources */,
 			);
-			name = InstabotDaily;
 			path = InstabotDaily;
 			sourceTree = "<group>";
 		};
@@ -413,6 +414,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InstabotDaily",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-FAB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -449,6 +454,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InstabotDaily",
+				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-FAB/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23BC4CA61F8E1E3100BB724D /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CA51F8E1E3100BB724D /* FAButton.swift */; };
-		23BC4CA71F8E1E3100BB724D /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CA51F8E1E3100BB724D /* FAButton.swift */; };
+		23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAB1F8F59B600BB724D /* Transition.swift */; };
+		23BC4CAD1F8F5BD800BB724D /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CA91F8F59A100BB724D /* FAButton.swift */; };
+		23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAF1F8F743600BB724D /* TransitionController.swift */; };
 		37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */; };
 		37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */; };
 		37B0DCC41F8BA31600F6C0F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC31F8BA31600F6C0F6 /* DetailViewController.swift */; };
@@ -33,7 +34,9 @@
 /* Begin PBXFileReference section */
 		0C1B44557AE60B39FE928497 /* Pods-FAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FAB/Pods-FAB.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5CA5BD2F9CB08B3D79B91F /* Pods-FABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FABUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FABUITests/Pods-FABUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		23BC4CA51F8E1E3100BB724D /* FAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
+		23BC4CA91F8F59A100BB724D /* FAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
+		23BC4CAB1F8F59B600BB724D /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		23BC4CAF1F8F743600BB724D /* TransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
 		37B0DCBC1F8BA31600F6C0F6 /* FAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -71,12 +74,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23BC4CA41F8E1E1700BB724D /* floating action button */ = {
+		23BC4CA81F8F59A100BB724D /* Floating Action Button */ = {
 			isa = PBXGroup;
 			children = (
-				23BC4CA51F8E1E3100BB724D /* FAButton.swift */,
+				23BC4CA91F8F59A100BB724D /* FAButton.swift */,
 			);
-			path = "floating action button";
+			path = "Floating Action Button";
+			sourceTree = "<group>";
+		};
+		23BC4CAA1F8F59A100BB724D /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				23BC4CAB1F8F59B600BB724D /* Transition.swift */,
+				23BC4CAF1F8F743600BB724D /* TransitionController.swift */,
+			);
+			path = Transitions;
 			sourceTree = "<group>";
 		};
 		37B0DCB31F8BA31600F6C0F6 = {
@@ -102,7 +114,8 @@
 		37B0DCBE1F8BA31600F6C0F6 /* FAB */ = {
 			isa = PBXGroup;
 			children = (
-				23BC4CA41F8E1E1700BB724D /* floating action button */,
+				23BC4CA81F8F59A100BB724D /* Floating Action Button */,
+				23BC4CAA1F8F59A100BB724D /* Transitions */,
 				37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */,
 				37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */,
 				37B0DCC31F8BA31600F6C0F6 /* DetailViewController.swift */,
@@ -199,7 +212,7 @@
 				TargetAttributes = {
 					37B0DCBB1F8BA31600F6C0F6 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					37B0DCD11F8BA31600F6C0F6 = {
 						CreatedOnToolsVersion = 9.0;
@@ -354,9 +367,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23BC4CA61F8E1E3100BB724D /* FAButton.swift in Sources */,
+				23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */,
 				37B0DCC41F8BA31600F6C0F6 /* DetailViewController.swift in Sources */,
 				37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */,
+				23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */,
+				23BC4CAD1F8F5BD800BB724D /* FAButton.swift in Sources */,
 				37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +380,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23BC4CA71F8E1E3100BB724D /* FAButton.swift in Sources */,
 				37B0DCD71F8BA31600F6C0F6 /* FABUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,11 +526,12 @@
 			baseConfigurationReference = 0C1B44557AE60B39FE928497 /* Pods-FAB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86652PZBLR;
 				INFOPLIST_FILE = FAB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = instabot.io.FAB;
+				PRODUCT_BUNDLE_IDENTIFIER = "fab.instabot.io-zaakk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -529,11 +544,12 @@
 			baseConfigurationReference = E59C351DFB6849E19D6303F0 /* Pods-FAB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 86652PZBLR;
 				INFOPLIST_FILE = FAB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = instabot.io.FAB;
+				PRODUCT_BUNDLE_IDENTIFIER = "fab.instabot.io-zaakk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

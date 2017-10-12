@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Instabot
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
+    var transition:TransitionController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -20,7 +21,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.loadInstabot(notification:)), name: NSNotification.Name(rawValue: kFABTapEventName), object: nil)
+        
         return true
+    }
+    
+    @objc private func loadInstabot(notification:Notification) {
+        Instabot.shared().setAPIKey("weNVx82HThJ4OO7arNtbUfeahnM8bWMsQhm+jfzwH6o=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
+        Instabot.shared().loadConversation(withId: 68050478) { [unowned self] (controller:IBConversationViewController?, error:Error?) in
+            guard let vc = controller else {
+                print(error.debugDescription)
+                return
+            }
+            let btn = notification.object as! UIButton
+//            self.transition = TransitionController(transitionFromView: btn)
+//            guard let transition = self.transition else {
+//                return
+//            }
+//            vc.transitioningDelegate = self.transition
+//            vc.modalPresentationStyle = .custom
+            
+            self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
