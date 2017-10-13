@@ -19,6 +19,8 @@ enum FABPosition: NSInteger {
 let kDefaultPaddingForButton:CGFloat = 15.0
 let kFABTapEventName = "FABTapped"
 
+fileprivate var isItAlreadyOnWindow:Bool = false
+
 class FAButton: UIButton {
     
     internal var width: CGFloat = 25.0
@@ -80,6 +82,10 @@ class FAButton: UIButton {
     }
     
     static func addToWindow(width:CGFloat = 25.0, position:FABPosition = .RightBottom, draggable:Bool = true) {
+        guard isItAlreadyOnWindow == false else {
+            return
+        }
+        isItAlreadyOnWindow = true
         let btn = FAButton(width: width, position: position, draggable: draggable)
         UIApplication.shared.keyWindow?.addSubview(btn)
     }
