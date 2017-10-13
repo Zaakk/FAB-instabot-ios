@@ -10,26 +10,40 @@ import Foundation
 import UIKit
 
 enum FABPosition: NSInteger {
-    case RightBottom
-    case LeftBottom
-    case RightTop
-    case LeftTop
+    case rightBottom, leftBottom, rightTop, leftTop
+}
+
+enum FABState: NSInteger {
+    case loading, normal
 }
 
 let kDefaultPaddingForButton:CGFloat = 15.0
 let kFABTapEventName = "FABTapped"
 
-fileprivate var isItAlreadyOnWindow:Bool = false
-
 class FAButton: UIButton {
+    
+    fileprivate static var isItAlreadyOnWindow:Bool = false
     
     internal var width: CGFloat = 25.0
     internal var draggable: Bool = true
-    internal var position:FABPosition = .RightBottom
+    internal var position:FABPosition = .rightBottom
+    internal var loadingIndicator:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
     
     private var buttonCenter = CGPoint.zero
     
-    init(width:CGFloat = 25.0, position:FABPosition = .RightBottom, draggable:Bool = true) {
+    var buttonState:FABState = .normal {
+        didSet {
+            if buttonState == .normal {
+                loadingIndicator.stopAnimating()
+                titleLabel?.alpha = 1
+            } else {
+                loadingIndicator.startAnimating()
+                titleLabel?.alpha = 0
+            }
+        }
+    }
+    
+    init(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
         super.init(frame: generateFrame(position: position, width: width))
         self.backgroundColor = UIColor.red
         self.frame = generateFrame(position: position, width: width)
@@ -53,6 +67,10 @@ class FAButton: UIButton {
             let pan = UIPanGestureRecognizer(target: self, action: #selector(self.panButton(pan:)))
             self.addGestureRecognizer(pan)
         }
+        loadingIndicator.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
+        loadingIndicator.isHidden = true
+        loadingIndicator.hidesWhenStopped = true
+        self.addSubview(loadingIndicator)
     }
     
     @objc private func tap() {
@@ -65,7 +83,7 @@ class FAButton: UIButton {
             buttonCenter = self.center
         case .changed:
             let location = pan.location(in: self.superview)
-            if  checkBounds(for: location) {
+            if checkBounds(for: location) {
                 self.center = location
             }
         default:
@@ -81,7 +99,7 @@ class FAButton: UIButton {
                 location.y - self.width / 2.0 > 0
     }
     
-    static func addToWindow(width:CGFloat = 25.0, position:FABPosition = .RightBottom, draggable:Bool = true) {
+    static func addOnWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
         guard isItAlreadyOnWindow == false else {
             return
         }
@@ -95,16 +113,16 @@ class FAButton: UIButton {
         var x:CGFloat = 0.0
         var y:CGFloat = 0.0
         switch position {
-        case .RightBottom:
+        case .rightBottom:
             x = screenSize.width - width - kDefaultPaddingForButton
             y = screenSize.height - width - kDefaultPaddingForButton
-        case .LeftBottom:
+        case .leftBottom:
             x = kDefaultPaddingForButton
             y = screenSize.height - width - kDefaultPaddingForButton
-        case .RightTop:
+        case .rightTop:
             x = screenSize.width - width - kDefaultPaddingForButton
             y = kDefaultPaddingForButton
-        case .LeftTop:
+        case .leftTop:
             x = kDefaultPaddingForButton
             y = kDefaultPaddingForButton
         }

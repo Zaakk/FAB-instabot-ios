@@ -28,13 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     @objc private func loadInstabot(notification:Notification) {
+        let btn = notification.object as! FAButton
+        btn.buttonState = .loading
         Instabot.shared().setAPIKey("weNVx82HThJ4OO7arNtbUfeahnM8bWMsQhm+jfzwH6o=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
         Instabot.shared().loadConversation(withId: 68050478) { [unowned self] (controller:IBConversationViewController?, error:Error?) in
             guard let vc = controller else {
                 print(error.debugDescription)
                 return
             }
-            let btn = notification.object as! UIView
+            btn.buttonState = .normal
             self.show(viewController: vc, from: btn)
         }
     }
