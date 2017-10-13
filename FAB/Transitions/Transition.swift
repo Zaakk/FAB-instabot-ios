@@ -2,119 +2,117 @@
 //  Transition.swift
 //  FAB
 //
-//  Created by Zakatnov's on 12.10.17.
+//  Created by Alexander Zakatnov on 12.10.17.
 //  Copyright © 2017 Alexander Zakatnov. All rights reserved.
 //
 
 import UIKit
-import Foundation
 
-@objc public enum TransitionMode: Int {
-    case present
-    case dismiss
+class CircularTransition: NSObject {
+    
+    var circle = UIView()
+    
+    var startingPoint = CGPoint.zero {
+        didSet {
+            circle.center = startingPoint
+        }
+    }
+    
+    var circleColor = UIColor.white
+    
+    var duration = 0.5
+    
+    enum CircularTransitionMode:Int {
+        case present, dismiss, pop
+    }
+    
+    var transitionMode:CircularTransitionMode = .present
+    
 }
 
-@objc public class BubbleTransition: NSObject {
-    public var startingPoint: CGPoint
-    public var transitionMode: TransitionMode
-    public var bubbleColor: UIColor?
+extension CircularTransition:UIViewControllerAnimatedTransitioning {
     
-    private var bubble: UIView!
-    private var presentingDuration: Double
-    private var dismissDuration: Double
-    
-    public override init() {
-        self.presentingDuration = 0.5
-        self.dismissDuration = 0.35
-        
-        self.startingPoint = CGPoint(x: 0.0, y: 0.0)
-        self.transitionMode = .present
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return duration
     }
     
-    private func frameForBubbleWithSize(originalSize: CGSize, start: CGPoint) -> CGRect {
-        let lengthX = fmax(start.x, originalSize.width - start.x);
-        let lengthY = fmax(start.y, originalSize.height - start.y)
-        
-        let offset = sqrt(lengthX * lengthX + lengthY * lengthY) * 2;
-        
-        return CGRect(x: 0, y: 0, width: offset, height: offset)
-    }
-}
-
-extension BubbleTransition: UIViewControllerAnimatedTransitioning {
-    
-    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return self.transitionMode == .present ? self.presentingDuration : self.dismissDuration
-    }
-    
-    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        guard let toView = transitionContext.view(forKey: .to), let fromView = transitionContext.view(forKey: .from) else {
-            return
-        }
-        
         if transitionMode == .present {
-            let originalCenter = toView.center
-            let originalSize = toView.frame.size
-            
-            let frame: CGRect = self.frameForBubbleWithSize(originalSize: originalSize, start: self.startingPoint)
-            
-            self.bubble = UIView(frame: frame)
-            self.bubble.layer.cornerRadius = self.bubble.frame.height / 2
-            self.bubble.center = self.startingPoint
-            self.bubble.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-            
-            if let bubbleColor = self.bubbleColor {
-                self.bubble.backgroundColor = bubbleColor
-            } else {
-                self.bubble.backgroundColor = toView.backgroundColor
+            if let presentedView = transitionContext.view(forKey: UITransitionContextViewKey.to) {
+                let viewCenter = presentedView.center
+                let viewSize = presentedView.frame.size
+                
+                circle = UIView()
+                
+                circle.frame = frameForCircle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
+                
+                circle.layer.cornerRadius = circle.frame.size.height / 2
+                circle.center = startingPoint
+                circle.backgroundColor = circleColor
+                circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                containerView.addSubview(circle)
+                
+                presentedView.center = startingPoint
+                presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                presentedView.alpha = 0
+                containerView.addSubview(presentedView)
+                
+                UIView.animate(withDuration: duration, animations: {
+                    self.circle.transform = CGAffineTransform.identity
+                    presentedView.transform = CGAffineTransform.identity
+                    presentedView.alpha = 1
+                    presentedView.center = viewCenter
+                }, completion: { (success:Bool) in
+                    transitionContext.completeTransition(success)
+                    self.circle.alpha = 0
+                })
             }
-            
-            toView.center = startingPoint
-            toView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-            toView.alpha = 0
-            
-            containerView.addSubview(toView)
-            containerView.addSubview(self.bubble)
-            
-            UIView.animate(withDuration: self.presentingDuration,
-                                       animations: {
-                    self.bubble.transform = CGAffineTransform.identity
-                    
-                    toView.transform = CGAffineTransform.identity
-                    toView.alpha = 1
-                    toView.center = originalCenter
-            },
-                                       completion: { (finished: Bool) -> (Void) in
-                                        if finished {
-                                            self.bubble.removeFromSuperview()
-                                            
-                                            transitionContext.completeTransition(true)
-                                        }
-            })
         } else {
-            let originalSize = fromView.frame.size
+            let transitionModeKey = (transitionMode == .pop) ? UITransitionContextViewKey.to : UITransitionContextViewKey.from
             
-            self.bubble.frame = self.frameForBubbleWithSize(originalSize: originalSize, start: startingPoint)
-            self.bubble.layer.cornerRadius = self.bubble.frame.height / 2
-            self.bubble.center = self.startingPoint
-            
-            containerView.addSubview(toView)
-            containerView.addSubview(self.bubble)
-            
-            UIView.animate(withDuration: self.dismissDuration,
-                                       animations: {
-                    self.bubble.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-            },
-                                       completion: { (finished: Bool) -> (Void) in
-                                        if finished {
-                                            toView.removeFromSuperview()
-                                            self.bubble.removeFromSuperview()
-                                            
-                                            transitionContext.completeTransition(true)
-                                        }
-            })
+            if let returningView = transitionContext.view(forKey: transitionModeKey) {
+                let viewCenter = returningView.center
+                let viewSize = returningView.frame.size
+                
+                circle.frame = frameForCircle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
+                
+                circle.layer.cornerRadius = circle.frame.size.height / 2
+                circle.center = startingPoint
+                circle.alpha = 1
+                
+                UIView.animate(withDuration: duration, animations: {
+                    self.circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                    returningView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                    returningView.center = self.startingPoint
+                    returningView.alpha = 0
+                    
+                    if self.transitionMode == .pop {
+                        containerView.insertSubview(returningView, belowSubview: returningView)
+                        containerView.insertSubview(self.circle, belowSubview: returningView)
+                    }
+                }, completion: { (success:Bool) in
+                    returningView.center = viewCenter
+                    returningView.removeFromSuperview()
+                    
+                    self.circle.removeFromSuperview()
+                    
+                    transitionContext.completeTransition(success)
+                    
+                })
+            }
         }
+    }
+    
+    func frameForCircle (withViewCenter viewCenter:CGPoint, size viewSize:CGSize, startPoint:CGPoint) -> CGRect {
+        let xLength = fmax(startPoint.x, viewSize.width - startPoint.x)
+        let yLength = fmax(startPoint.y, viewSize.height - startPoint.y)
+        
+        let offestVector = sqrt(xLength * xLength + yLength * yLength) * 2
+        let size = CGSize(width: offestVector, height: offestVector)
+        
+        return CGRect(origin: CGPoint.zero, size: size)
+        
     }
 }

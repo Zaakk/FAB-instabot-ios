@@ -13,7 +13,7 @@ import Instabot
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-    var transition:TransitionController?
+    var transition:TransitionController = TransitionController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -34,16 +34,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 print(error.debugDescription)
                 return
             }
-            let btn = notification.object as! UIButton
-//            self.transition = TransitionController(transitionFromView: btn)
-//            guard let transition = self.transition else {
-//                return
-//            }
-//            vc.transitioningDelegate = self.transition
-//            vc.modalPresentationStyle = .custom
-            
-            self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+            let btn = notification.object as! UIView
+            self.show(viewController: vc, from: btn)
         }
+    }
+    
+    func show(viewController vc:UIViewController, from view:UIView) {
+        transition.fromView = view
+        vc.transitioningDelegate = transition
+        vc.modalPresentationStyle = .custom
+        
+        let splitViewController = window!.rootViewController as! UISplitViewController
+        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
+        navigationController.topViewController!.present(vc, animated: true, completion: nil)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
