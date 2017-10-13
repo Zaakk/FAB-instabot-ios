@@ -11,15 +11,17 @@ import UIKit
 
 class TransitionController:NSObject, UIViewControllerTransitioningDelegate {
     
+    /// Animation should start from this view
     var fromView:UIView?
-    let transition = CircularTransition()
+    
+    private let transition = CircularTransition()
     
     init(transitionFromView:UIView) {
         self.fromView = transitionFromView
     }
     
     override init() {
-        
+        super.init()
     }
     
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

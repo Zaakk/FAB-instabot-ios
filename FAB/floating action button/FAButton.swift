@@ -43,6 +43,21 @@ class FAButton: UIButton {
         }
     }
     
+    /// Instantiates and adds button on root window.
+    ///
+    /// - Parameters:
+    ///   - width: size of square button
+    ///   - position: start position on screen
+    ///   - draggable: enable/disable drag&drop
+    static func addOnWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
+        guard isItAlreadyOnWindow == false else {
+            return
+        }
+        isItAlreadyOnWindow = true
+        let btn = FAButton(width: width, position: position, draggable: draggable)
+        UIApplication.shared.keyWindow?.addSubview(btn)
+    }
+    
     init(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
         super.init(frame: generateFrame(position: position, width: width))
         self.backgroundColor = UIColor.red
@@ -91,21 +106,15 @@ class FAButton: UIButton {
         }
     }
     
+    /**
+     returns true if location inside of view bounds
+     **/
     private func checkBounds(for location:CGPoint) -> Bool {
         let screenSize:CGSize = UIScreen.main.bounds.size
         return  location.x + self.width / 2.0 < screenSize.width &&
                 location.y + self.width / 2.0 < screenSize.height &&
                 location.x - self.width / 2.0 > 0 &&
                 location.y - self.width / 2.0 > 0
-    }
-    
-    static func addOnWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
-        guard isItAlreadyOnWindow == false else {
-            return
-        }
-        isItAlreadyOnWindow = true
-        let btn = FAButton(width: width, position: position, draggable: draggable)
-        UIApplication.shared.keyWindow?.addSubview(btn)
     }
     
     func generateFrame(position:FABPosition, width:CGFloat) -> CGRect {

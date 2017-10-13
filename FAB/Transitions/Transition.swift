@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum CircularTransitionMode:Int {
+    case present, dismiss
+}
+
 class CircularTransition: NSObject {
     
     var circle = UIView()
@@ -18,16 +22,14 @@ class CircularTransition: NSObject {
         }
     }
     
+    /// Color of animated circle
     var circleColor = UIColor.white
     
+    /// Animation duration
     var duration = 0.5
     
-    enum CircularTransitionMode:Int {
-        case present, dismiss
-    }
-    
+    /// Animation mode - show or hide controller
     var transitionMode:CircularTransitionMode = .present
-    
 }
 
 extension CircularTransition:UIViewControllerAnimatedTransitioning {
