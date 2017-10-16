@@ -9,6 +9,8 @@
 import UIKit
 import Instabot
 
+let conversationId = 68050478
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
@@ -16,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     var transition:TransitionController = TransitionController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		Instabot.start()
+		
+		// Move move link to app to plist and remove the next line
+		Instabot.shared().setAPIKey("weNVx82HThJ4OO7arNtbUfeahnM8bWMsQhm+jfzwH6o=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
+		
         // Override point for customization after application launch.
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
@@ -28,15 +35,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     @objc private func loadInstabot(notification:Notification) {
-        let btn = notification.object as! FAButton
+		guard let btn = notification.object as? FAButton else {
+			return
+		}
         btn.buttonState = .loading
-        Instabot.shared().setAPIKey("weNVx82HThJ4OO7arNtbUfeahnM8bWMsQhm+jfzwH6o=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
-        Instabot.shared().loadConversation(withId: 68050478) { [unowned self] (controller:IBConversationViewController?, error:Error?) in
-            guard let vc = controller else {
+        Instabot.shared().loadConversation(withId: conversationId) { [unowned self] (controller:IBConversationViewController?, error:Error?) in
+			btn.buttonState = .normal
+			guard let vc = controller else {
                 print(error.debugDescription)
                 return
             }
-            btn.buttonState = .normal
             self.show(viewController: vc, from: btn)
         }
     }
