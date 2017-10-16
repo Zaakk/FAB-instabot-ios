@@ -1,12 +1,12 @@
 PODS:
-  - InstabotDaily (1.0.6)
+  - Instabot (1.0.0)
 
 DEPENDENCIES:
-  - InstabotDaily
+  - Instabot
 
 SPEC CHECKSUMS:
-  InstabotDaily: 432906e784720436dd42c9c20e30d3adea8c1fd4
+  Instabot: 51bc765a07354941550d9ee303849e75c205d8a8
 
-PODFILE CHECKSUM: 7ceb031a8d715cdf69e21de8efb0d17a2787b267
+PODFILE CHECKSUM: 3d84c09fb1ab24dfc9c0078669c2351236b36a7e
 
 COCOAPODS: 1.3.1

@@ -268,7 +268,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FAB/Pods-FAB-resources.sh",
-				"${PODS_ROOT}/InstabotDaily/Instabot.framework/InstabotResources.bundle",
+				"${PODS_ROOT}/Instabot/Instabot.framework/InstabotResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

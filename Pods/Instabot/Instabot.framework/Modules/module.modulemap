@@ -1,0 +1,6 @@
+framework module Instabot {
+  umbrella header "Instabot.h"
+
+  export *
+  module * { export * }
+}

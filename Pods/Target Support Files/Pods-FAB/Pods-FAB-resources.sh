@@ -84,10 +84,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/InstabotDaily/Instabot.framework/InstabotResources.bundle"
+  install_resource "${PODS_ROOT}/Instabot/Instabot.framework/InstabotResources.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/InstabotDaily/Instabot.framework/InstabotResources.bundle"
+  install_resource "${PODS_ROOT}/Instabot/Instabot.framework/InstabotResources.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
