@@ -9,8 +9,17 @@
 import Foundation
 import UIKit
 
+/// Possible inititial positions of the button
+///
+/// - rightBottom: right bottom corner
+/// - leftBottom: left bottom corner
+/// - rightTop: right top corner
+/// - leftTop: left top corner
 enum FABPosition: NSInteger {
-    case rightBottom, leftBottom, rightTop, leftTop
+    case rightBottom
+	case leftBottom
+	case rightTop
+	case leftTop
 }
 
 
