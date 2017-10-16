@@ -13,16 +13,23 @@ enum FABPosition: NSInteger {
     case rightBottom, leftBottom, rightTop, leftTop
 }
 
+
+/// Button state
+///
+/// - normal: Normal state of button
+/// - loading: Button tapped, waiting for server response. Activity indicator is shown
 enum FABState: NSInteger {
-    case loading, normal
+	case normal
+	case loading
 }
 
 let kDefaultPaddingForButton:CGFloat = 15.0
 let kFABTapEventName = "FABTapped"
 
+/// Floating Action Button.
 class FAButton: UIButton {
     
-    fileprivate static var isItAlreadyOnWindow:Bool = false
+    fileprivate static var isOnWindow:Bool = false
     
     internal var width: CGFloat = 25.0
     internal var draggable: Bool = true
@@ -49,19 +56,19 @@ class FAButton: UIButton {
     ///   - width: size of square button
     ///   - position: start position on screen
     ///   - draggable: enable/disable drag&drop
-    static func addOnWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
-        guard isItAlreadyOnWindow == false else {
+    static func addToWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
+        guard isOnWindow == false else {
             return
         }
-        isItAlreadyOnWindow = true
+        isOnWindow = true
         let btn = FAButton(width: width, position: position, draggable: draggable)
         UIApplication.shared.keyWindow?.addSubview(btn)
     }
     
     init(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
-        super.init(frame: generateFrame(position: position, width: width))
+        super.init(frame: frame(for: position, width: width))
         self.backgroundColor = UIColor.red
-        self.frame = generateFrame(position: position, width: width)
+        self.frame = frame(for: position, width: width)
         self.width = width
         self.draggable = draggable
         self.position = position
@@ -117,7 +124,7 @@ class FAButton: UIButton {
                 location.y - self.width / 2.0 > 0
     }
     
-    func generateFrame(position:FABPosition, width:CGFloat) -> CGRect {
+    func frame(for position:FABPosition, width:CGFloat) -> CGRect {
         let screenSize = UIScreen.main.bounds
         var x:CGFloat = 0.0
         var y:CGFloat = 0.0

@@ -34,7 +34,7 @@ class MasterViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        FAButton.addOnWindow(width: 50.0, position: .leftBottom, draggable: true)
+        FAButton.addToWindow(width: 50.0, position: .leftBottom, draggable: true)
     }
 
     override func didReceiveMemoryWarning() {
