@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAB1F8F59B600BB724D /* Transition.swift */; };
-		23BC4CAD1F8F5BD800BB724D /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CA91F8F59A100BB724D /* FAButton.swift */; };
 		23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAF1F8F743600BB724D /* TransitionController.swift */; };
+		2730EE2F1F94880D00C3478E /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730EE2E1F9487CF00C3478E /* FAButton.swift */; };
 		37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */; };
 		37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */; };
 		37B0DCC41F8BA31600F6C0F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC31F8BA31600F6C0F6 /* DetailViewController.swift */; };
@@ -34,9 +34,9 @@
 /* Begin PBXFileReference section */
 		0C1B44557AE60B39FE928497 /* Pods-FAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FAB/Pods-FAB.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5CA5BD2F9CB08B3D79B91F /* Pods-FABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FABUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FABUITests/Pods-FABUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		23BC4CA91F8F59A100BB724D /* FAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
 		23BC4CAB1F8F59B600BB724D /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		23BC4CAF1F8F743600BB724D /* TransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
+		2730EE2E1F9487CF00C3478E /* FAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
 		37B0DCBC1F8BA31600F6C0F6 /* FAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -74,14 +74,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23BC4CA81F8F59A100BB724D /* Floating Action Button */ = {
-			isa = PBXGroup;
-			children = (
-				23BC4CA91F8F59A100BB724D /* FAButton.swift */,
-			);
-			path = "Floating Action Button";
-			sourceTree = "<group>";
-		};
 		23BC4CAA1F8F59A100BB724D /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +81,14 @@
 				23BC4CAF1F8F743600BB724D /* TransitionController.swift */,
 			);
 			path = Transitions;
+			sourceTree = "<group>";
+		};
+		2730EE2D1F9487CF00C3478E /* FloatingActionButton */ = {
+			isa = PBXGroup;
+			children = (
+				2730EE2E1F9487CF00C3478E /* FAButton.swift */,
+			);
+			path = FloatingActionButton;
 			sourceTree = "<group>";
 		};
 		37B0DCB31F8BA31600F6C0F6 = {
@@ -114,7 +114,7 @@
 		37B0DCBE1F8BA31600F6C0F6 /* FAB */ = {
 			isa = PBXGroup;
 			children = (
-				23BC4CA81F8F59A100BB724D /* Floating Action Button */,
+				2730EE2D1F9487CF00C3478E /* FloatingActionButton */,
 				23BC4CAA1F8F59A100BB724D /* Transitions */,
 				37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */,
 				37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */,
@@ -369,9 +369,9 @@
 			files = (
 				23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */,
 				37B0DCC41F8BA31600F6C0F6 /* DetailViewController.swift in Sources */,
+				2730EE2F1F94880D00C3478E /* FAButton.swift in Sources */,
 				37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */,
 				23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */,
-				23BC4CAD1F8F5BD800BB724D /* FAButton.swift in Sources */,
 				37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
