@@ -9,7 +9,7 @@
 import UIKit
 import Instabot
 
-let conversationId = 68050478
+let conversationId = 68102509
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 		Instabot.start()
 		
 		// Move move link to app to plist and remove the next line
-		Instabot.shared().setAPIKey("weNVx82HThJ4OO7arNtbUfeahnM8bWMsQhm+jfzwH6o=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
+		Instabot.shared().setAPIKey("TKLV85uWiwiWziKKb+52wJccLzdwBVw7zap8gZB273A=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadInstabot(notification:)), name: NSNotification.Name(rawValue: kFABTapEventName), object: nil)
         
