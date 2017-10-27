@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233BA74F1FA26CCA007A252F /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233BA74E1FA26CCA007A252F /* SafariServices.framework */; };
+		233BA7511FA271BA007A252F /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730EE2E1F9487CF00C3478E /* FAButton.swift */; };
 		23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAB1F8F59B600BB724D /* Transition.swift */; };
 		23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAF1F8F743600BB724D /* TransitionController.swift */; };
-		2730EE2F1F94880D00C3478E /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730EE2E1F9487CF00C3478E /* FAButton.swift */; };
 		37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */; };
 		37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */; };
-		37B0DCC41F8BA31600F6C0F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC31F8BA31600F6C0F6 /* DetailViewController.swift */; };
 		37B0DCC71F8BA31600F6C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCC51F8BA31600F6C0F6 /* Main.storyboard */; };
-		37B0DCC91F8BA31600F6C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCC81F8BA31600F6C0F6 /* Assets.xcassets */; };
 		37B0DCCC1F8BA31600F6C0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCCA1F8BA31600F6C0F6 /* LaunchScreen.storyboard */; };
 		37B0DCD71F8BA31600F6C0F6 /* FABUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCD61F8BA31600F6C0F6 /* FABUITests.swift */; };
+		37B0DCE81FA3235C00F6C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233BA7561FA272D5007A252F /* Assets.xcassets */; };
 		49D19A9B6D24BEECED127936 /* Pods_FABUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DDDEF11C90441915FE52C8 /* Pods_FABUITests.framework */; };
 		BA7E9E04A9E1FBF42A2F6EE2 /* Pods_FAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CD2E50A42B06C76E5C505E /* Pods_FAB.framework */; };
 /* End PBXBuildFile section */
@@ -34,17 +34,19 @@
 /* Begin PBXFileReference section */
 		0C1B44557AE60B39FE928497 /* Pods-FAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FAB/Pods-FAB.debug.xcconfig"; sourceTree = "<group>"; };
 		1C5CA5BD2F9CB08B3D79B91F /* Pods-FABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FABUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FABUITests/Pods-FABUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		233BA74E1FA26CCA007A252F /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		233BA7531FA272C8007A252F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		233BA7541FA272C8007A252F /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		233BA7551FA272C8007A252F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		233BA7561FA272D5007A252F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23BC4CAB1F8F59B600BB724D /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		23BC4CAF1F8F743600BB724D /* TransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionController.swift; sourceTree = "<group>"; };
 		2730EE2E1F9487CF00C3478E /* FAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAButton.swift; sourceTree = "<group>"; };
 		37B0DCBC1F8BA31600F6C0F6 /* FAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		37B0DCC31F8BA31600F6C0F6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		37B0DCC61F8BA31600F6C0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		37B0DCC81F8BA31600F6C0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B0DCCB1F8BA31600F6C0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		37B0DCCD1F8BA31600F6C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37B0DCD21F8BA31600F6C0F6 /* FABUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FABUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0DCD61F8BA31600F6C0F6 /* FABUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABUITests.swift; sourceTree = "<group>"; };
 		37B0DCD81F8BA31600F6C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233BA74F1FA26CCA007A252F /* SafariServices.framework in Frameworks */,
 				BA7E9E04A9E1FBF42A2F6EE2 /* Pods_FAB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233BA7521FA272C8007A252F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				233BA7561FA272D5007A252F /* Assets.xcassets */,
+				233BA7531FA272C8007A252F /* Info.plist */,
+				233BA7541FA272C8007A252F /* Montserrat-Light.ttf */,
+				233BA7551FA272C8007A252F /* Montserrat-Regular.ttf */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		23BC4CAA1F8F59A100BB724D /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,11 +132,9 @@
 				23BC4CAA1F8F59A100BB724D /* Transitions */,
 				37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */,
 				37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */,
-				37B0DCC31F8BA31600F6C0F6 /* DetailViewController.swift */,
 				37B0DCC51F8BA31600F6C0F6 /* Main.storyboard */,
-				37B0DCC81F8BA31600F6C0F6 /* Assets.xcassets */,
 				37B0DCCA1F8BA31600F6C0F6 /* LaunchScreen.storyboard */,
-				37B0DCCD1F8BA31600F6C0F6 /* Info.plist */,
+				233BA7521FA272C8007A252F /* Supporting files */,
 			);
 			path = FAB;
 			sourceTree = "<group>";
@@ -139,6 +151,7 @@
 		8714C193668CA7973D98F71C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				233BA74E1FA26CCA007A252F /* SafariServices.framework */,
 				72CD2E50A42B06C76E5C505E /* Pods_FAB.framework */,
 				A6DDDEF11C90441915FE52C8 /* Pods_FABUITests.framework */,
 			);
@@ -246,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B0DCCC1F8BA31600F6C0F6 /* LaunchScreen.storyboard in Resources */,
-				37B0DCC91F8BA31600F6C0F6 /* Assets.xcassets in Resources */,
+				37B0DCE81FA3235C00F6C0F6 /* Assets.xcassets in Resources */,
 				37B0DCC71F8BA31600F6C0F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,10 +381,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */,
-				37B0DCC41F8BA31600F6C0F6 /* DetailViewController.swift in Sources */,
-				2730EE2F1F94880D00C3478E /* FAButton.swift in Sources */,
 				37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */,
 				23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */,
+				233BA7511FA271BA007A252F /* FAButton.swift in Sources */,
 				37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +541,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86652PZBLR;
-				INFOPLIST_FILE = FAB/Info.plist;
+				INFOPLIST_FILE = "FAB/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fab.instabot.io-zaakk";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -547,7 +559,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 86652PZBLR;
-				INFOPLIST_FILE = FAB/Info.plist;
+				INFOPLIST_FILE = "FAB/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fab.instabot.io-zaakk";
 				PRODUCT_NAME = "$(TARGET_NAME)";

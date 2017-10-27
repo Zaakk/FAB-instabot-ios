@@ -35,7 +35,7 @@
  */
 - (nullable IBConversationTreeNode *)firstQuestion;
 
-- (nullable IBConversationTreeNode *)nextQuestionForAnswerWithIndex:(NSInteger)answerIndex;
+- (nullable IBConversationTreeNode *)nextQuestionWithAction:(nonnull IBConversationTreeAction *)action;
 
 - (nullable IBConversationTreeNode *)currentQuestion;
 

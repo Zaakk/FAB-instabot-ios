@@ -1,11 +1,11 @@
 PODS:
-  - Instabot (1.0.0)
+  - Instabot (1.0.1)
 
 DEPENDENCIES:
   - Instabot
 
 SPEC CHECKSUMS:
-  Instabot: 51bc765a07354941550d9ee303849e75c205d8a8
+  Instabot: a5bb96162e6b4f2369b08ebb2a17abdaffbc307d
 
 PODFILE CHECKSUM: 3d84c09fb1ab24dfc9c0078669c2351236b36a7e
 

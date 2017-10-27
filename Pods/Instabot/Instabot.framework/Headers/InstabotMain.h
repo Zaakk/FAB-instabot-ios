@@ -15,6 +15,8 @@
 
 typedef void (^IBLoadConversationCompletionBlock)(IBConversationViewController * _Nullable controller, NSError * _Nullable error);
 
+extern NSString * _Nonnull const kIBShowApplicationPageNotification;
+
 /**
  The entry point of Instabot framework
  */

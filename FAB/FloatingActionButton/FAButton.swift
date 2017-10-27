@@ -2,7 +2,7 @@
 //  FAButton.swift
 //  FAB
 //
-//  Created by Zakatnov's on 11.10.17.
+//  Created by Alexander Zakatnov on 11.10.17.
 //  Copyright © 2017 Alexander Zakatnov. All rights reserved.
 //
 
@@ -32,18 +32,18 @@ enum FABState: NSInteger {
 	case loading
 }
 
-let kDefaultPaddingForButton:CGFloat = 15.0
+let kDefaultPaddingForButton:CGFloat = 16.0
 let kFABTapEventName = "FABTapped"
 
 /// Floating Action Button.
 class FAButton: UIButton {
     
-    fileprivate static var isOnWindow:Bool = false
-    
     internal var width: CGFloat = 25.0
     internal var draggable: Bool = true
     internal var position:FABPosition = .rightBottom
     internal var loadingIndicator:UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
+    
+    internal static var globalBtn:FAButton?
     
     private var buttonCenter = CGPoint.zero
     
@@ -59,6 +59,21 @@ class FAButton: UIButton {
         }
     }
     
+    static var globalButtonImage: UIImage? {
+        didSet {
+            guard let btn = globalBtn else {
+                return
+            }
+            guard let image = globalButtonImage else {
+                return
+            }
+            btn.setImage(globalButtonImage, for: .normal)
+            btn.setTitle(nil, for: .normal)
+            btn.backgroundColor = UIColor.clear
+            btn.frame = btn.frame(for: btn.position, width: image.size.width, height: image.size.height)
+        }
+    }
+    
     /// Instantiates and adds button on root window.
     ///
     /// - Parameters:
@@ -66,18 +81,19 @@ class FAButton: UIButton {
     ///   - position: start position on screen
     ///   - draggable: enable/disable drag&drop
     static func addToWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
-        guard isOnWindow == false else {
+        guard globalBtn == nil else {
             return
         }
-        isOnWindow = true
-        let btn = FAButton(width: width, position: position, draggable: draggable)
+        globalBtn = FAButton(width: width, position: position, draggable: draggable)
+        guard let btn = globalBtn else {
+            return
+        }
         UIApplication.shared.keyWindow?.addSubview(btn)
     }
     
     init(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
-        super.init(frame: frame(for: position, width: width))
+        super.init(frame: frame(for: position, width: width, height: width))
         self.backgroundColor = UIColor.red
-        self.frame = frame(for: position, width: width)
         self.width = width
         self.draggable = draggable
         self.position = position
@@ -91,6 +107,12 @@ class FAButton: UIButton {
         super.init(coder: aDecoder)
     }
     
+    override var frame: CGRect {
+        didSet {
+            loadingIndicator.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
+        }
+    }
+    
     private func configureView() {
         self.setTitle("I", for: .normal)
         self.layer.cornerRadius = self.width / 2.0
@@ -98,7 +120,6 @@ class FAButton: UIButton {
             let pan = UIPanGestureRecognizer(target: self, action: #selector(self.panButton(pan:)))
             self.addGestureRecognizer(pan)
         }
-        loadingIndicator.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
         loadingIndicator.isHidden = true
         loadingIndicator.hidesWhenStopped = true
         self.addSubview(loadingIndicator)
@@ -133,17 +154,17 @@ class FAButton: UIButton {
                 location.y - self.width / 2.0 > 0
     }
     
-    func frame(for position:FABPosition, width:CGFloat) -> CGRect {
+    func frame(for position:FABPosition, width:CGFloat, height:CGFloat) -> CGRect {
         let screenSize = UIScreen.main.bounds
         var x:CGFloat = 0.0
         var y:CGFloat = 0.0
         switch position {
         case .rightBottom:
             x = screenSize.width - width - kDefaultPaddingForButton
-            y = screenSize.height - width - kDefaultPaddingForButton
+            y = screenSize.height - height - kDefaultPaddingForButton
         case .leftBottom:
             x = kDefaultPaddingForButton
-            y = screenSize.height - width - kDefaultPaddingForButton
+            y = screenSize.height - height - kDefaultPaddingForButton
         case .rightTop:
             x = screenSize.width - width - kDefaultPaddingForButton
             y = kDefaultPaddingForButton
@@ -152,7 +173,7 @@ class FAButton: UIButton {
             y = kDefaultPaddingForButton
         }
         
-        return CGRect(x: x, y: y, width: width, height: width)
+        return CGRect(x: x, y: y, width: width, height: height)
     }
     
 }
