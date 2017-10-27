@@ -70,7 +70,7 @@ class FAButton: UIButton {
             btn.setImage(globalButtonImage, for: .normal)
             btn.setTitle(nil, for: .normal)
             btn.backgroundColor = UIColor.clear
-            btn.frame = btn.generateFrame(for: btn.position, width: image.size.width, height: image.size.height)
+            btn.frame = btn.frame(for: btn.position, width: image.size.width, height: image.size.height)
         }
     }
     
@@ -92,9 +92,8 @@ class FAButton: UIButton {
     }
     
     init(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
-        super.init(frame: generateFrame(for: position, width: width, height: width))
+        super.init(frame: frame(for: position, width: width, height: width))
         self.backgroundColor = UIColor.red
-        self.frame = generateFrame(for: position, width: width, height: width)
         self.width = width
         self.draggable = draggable
         self.position = position
@@ -155,7 +154,7 @@ class FAButton: UIButton {
                 location.y - self.width / 2.0 > 0
     }
     
-    func generateFrame(for position:FABPosition, width:CGFloat, height:CGFloat) -> CGRect {
+    func frame(for position:FABPosition, width:CGFloat, height:CGFloat) -> CGRect {
         let screenSize = UIScreen.main.bounds
         var x:CGFloat = 0.0
         var y:CGFloat = 0.0
