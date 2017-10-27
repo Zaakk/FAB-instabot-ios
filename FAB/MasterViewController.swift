@@ -15,7 +15,7 @@ class MasterViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        FAButton.addOnWindow(width: 56.0, position: .rightBottom, draggable: true)
+        FAButton.addToWindow(width: 56.0, position: .rightBottom, draggable: true)
         guard let btnImage:UIImage = UIImage(named: "fab") else {
             return
         }

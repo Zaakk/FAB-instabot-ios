@@ -80,7 +80,7 @@ class FAButton: UIButton {
     ///   - width: size of square button
     ///   - position: start position on screen
     ///   - draggable: enable/disable drag&drop
-    static func addOnWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
+    static func addToWindow(width:CGFloat = 25.0, position:FABPosition = .rightBottom, draggable:Bool = true) {
         guard globalBtn == nil else {
             return
         }

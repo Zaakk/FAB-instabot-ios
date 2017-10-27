@@ -16,6 +16,7 @@
 		37B0DCC71F8BA31600F6C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCC51F8BA31600F6C0F6 /* Main.storyboard */; };
 		37B0DCCC1F8BA31600F6C0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCCA1F8BA31600F6C0F6 /* LaunchScreen.storyboard */; };
 		37B0DCD71F8BA31600F6C0F6 /* FABUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCD61F8BA31600F6C0F6 /* FABUITests.swift */; };
+		37B0DCE81FA3235C00F6C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233BA7561FA272D5007A252F /* Assets.xcassets */; };
 		49D19A9B6D24BEECED127936 /* Pods_FABUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DDDEF11C90441915FE52C8 /* Pods_FABUITests.framework */; };
 		BA7E9E04A9E1FBF42A2F6EE2 /* Pods_FAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CD2E50A42B06C76E5C505E /* Pods_FAB.framework */; };
 /* End PBXBuildFile section */
@@ -258,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B0DCCC1F8BA31600F6C0F6 /* LaunchScreen.storyboard in Resources */,
+				37B0DCE81FA3235C00F6C0F6 /* Assets.xcassets in Resources */,
 				37B0DCC71F8BA31600F6C0F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
