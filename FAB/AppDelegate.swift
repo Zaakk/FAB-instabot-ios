@@ -9,7 +9,7 @@
 import UIKit
 import Instabot
 
-let conversationId = 68050478
+let kConversationId = 173386625
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -19,9 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		Instabot.start()
-		
-		// Move move link to app to plist and remove the next line
-		Instabot.shared().setAPIKey("weNVx82HThJ4OO7arNtbUfeahnM8bWMsQhm+jfzwH6o=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadInstabot(notification:)), name: NSNotification.Name(rawValue: kFABTapEventName), object: nil)
         
@@ -33,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 			return
 		}
         btn.buttonState = .loading
-        Instabot.shared().loadConversation(withId: conversationId) { [unowned self] (controller:IBConversationViewController?, error:Error?) in
-			btn.buttonState = .normal
-			guard let vc = controller else {
+        Instabot.shared().loadConversation(withId: kConversationId) { [unowned self] (controller:IBConversationViewController?, error:Error?) in
+            btn.buttonState = .normal
+            guard let vc = controller else {
                 print(error.debugDescription)
                 return
             }
