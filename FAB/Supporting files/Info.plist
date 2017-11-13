@@ -49,6 +49,8 @@
 		<string>Montserrat-Light.ttf</string>
 		<string>Montserrat-Regular.ttf</string>
 	</array>
+	<key>InstabotAPIKey</key>
+	<string>3KyK3Uzu1erpUTRaVDiXTchibuZchxdxJ26ZGfsGY18=</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -19,9 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		Instabot.start()
-		
-		// Move move link to app to plist and remove the next line
-		Instabot.shared().setAPIKey("TKLV85uWiwiWziKKb+52wJccLzdwBVw7zap8gZB273A=", forURL: "rmsws.qa.rokolabs.com/external/v1/")
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.loadInstabot(notification:)), name: NSNotification.Name(rawValue: kFABTapEventName), object: nil)
         
