@@ -4,22 +4,24 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-FAB.xcscheme</key>
+		<key>Instabot FAB.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>Pods-FABUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>37B0DCBB1F8BA31600F6C0F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37B0DCD11F8BA31600F6C0F6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
