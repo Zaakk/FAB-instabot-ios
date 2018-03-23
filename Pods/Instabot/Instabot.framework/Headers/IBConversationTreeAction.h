@@ -23,7 +23,7 @@ typedef NS_ENUM (NSInteger, IBConversationTreeActionType) {
 @class IBConversationTreeActionSettings;
 @class IBFileUploadInfo;
 
-@interface IBConversationTreeAction : IBDataItem
+@interface IBConversationTreeAction : IBDataItem <NSCopying>
 
 @property (nonatomic, assign) IBConversationTreeActionType type;
 @property (nonatomic, assign) IBConversationTreeActionType postActionType;
@@ -35,16 +35,6 @@ typedef NS_ENUM (NSInteger, IBConversationTreeActionType) {
 @property (nonatomic, copy) NSString *cardDescription;
 @property (nonatomic, copy) NSArray *multiSelectOptions;
 @property (nonatomic, strong) IBConversationTreeActionSettings *settings;
-@property (nonatomic, strong) NSNumber *contentItemId;
-
-// not the best way to display attached images, but the fastes
-// needs to move this property from action class
-@property (nonatomic, strong) UIImage *attachedImage;
-
-// temp fix for http://jira.rokolabs.com/browse/RSD-1284, we should not store user responses in action model
-@property (nonatomic, strong) NSArray<NSString *> *selectedOptions;
-
-@property (nonatomic, strong) NSString *userResponse;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary saveNodesToMap:(NSMutableDictionary<NSNumber *, IBConversationTreeNode *> *)map;
 

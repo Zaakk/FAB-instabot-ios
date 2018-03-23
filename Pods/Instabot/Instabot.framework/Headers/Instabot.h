@@ -23,3 +23,4 @@ FOUNDATION_EXPORT const unsigned char InstabotVersionString[];
 #import <Instabot/IBImageInfo.h>
 #import <Instabot/IBConversation.h>
 #import <Instabot/IBConversationViewController.h>
+#import <Instabot/IBPush.h>

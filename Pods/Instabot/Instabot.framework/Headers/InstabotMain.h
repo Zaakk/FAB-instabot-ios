@@ -50,11 +50,17 @@ extern NSString * _Nonnull const kIBShowApplicationPageNotification;
 /**
  Allows to switch to another application to another application from code
 
- @param key API Key of your application
+ @param key API Key of your portal application
  @param url Use nil in most cases
  */
 - (void)setAPIKey:(nonnull NSString *)key forURL:(nullable NSString *)url;
 
+/**
+ Allows to switch to another application to another application from code
+ 
+ @param key API Key of your portal application
+ */
+- (void)setAPIKey:(nonnull NSString *)key;
 
 /**
  Account management

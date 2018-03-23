@@ -12,13 +12,14 @@
 		233BA7511FA271BA007A252F /* FAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730EE2E1F9487CF00C3478E /* FAButton.swift */; };
 		23BC4CAC1F8F59B600BB724D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAB1F8F59B600BB724D /* Transition.swift */; };
 		23BC4CB01F8F743700BB724D /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BC4CAF1F8F743600BB724D /* TransitionController.swift */; };
+		323D88E5C5DBD3174891A1AC /* Pods_Instabot_FAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46AAD2BB88C8F5FDBA092E58 /* Pods_Instabot_FAB.framework */; };
 		37B0DCC01F8BA31600F6C0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCBF1F8BA31600F6C0F6 /* AppDelegate.swift */; };
 		37B0DCC21F8BA31600F6C0F6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCC11F8BA31600F6C0F6 /* MasterViewController.swift */; };
 		37B0DCC71F8BA31600F6C0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCC51F8BA31600F6C0F6 /* Main.storyboard */; };
 		37B0DCCC1F8BA31600F6C0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37B0DCCA1F8BA31600F6C0F6 /* LaunchScreen.storyboard */; };
 		37B0DCD71F8BA31600F6C0F6 /* FABUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0DCD61F8BA31600F6C0F6 /* FABUITests.swift */; };
-		37B0DCE81FA3235C00F6C0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 233BA7561FA272D5007A252F /* Assets.xcassets */; };
 		49D19A9B6D24BEECED127936 /* Pods_FABUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6DDDEF11C90441915FE52C8 /* Pods_FABUITests.framework */; };
+		7617F9022DAB815127FB3BA1 /* Pods_Instabot_FABUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB4CC0DE86A06451A4D4552 /* Pods_Instabot_FABUITests.framework */; };
 		BA7E9E04A9E1FBF42A2F6EE2 /* Pods_FAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72CD2E50A42B06C76E5C505E /* Pods_FAB.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,9 +52,15 @@
 		37B0DCD21F8BA31600F6C0F6 /* Instabot FABUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Instabot FABUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0DCD61F8BA31600F6C0F6 /* FABUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FABUITests.swift; sourceTree = "<group>"; };
 		37B0DCD81F8BA31600F6C0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46AAD2BB88C8F5FDBA092E58 /* Pods_Instabot_FAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instabot_FAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB4CC0DE86A06451A4D4552 /* Pods_Instabot_FABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instabot_FABUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AF3A6988DA9A75AA04A0841 /* Pods-Instabot FABUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instabot FABUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instabot FABUITests/Pods-Instabot FABUITests.release.xcconfig"; sourceTree = "<group>"; };
 		72CD2E50A42B06C76E5C505E /* Pods_FAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF988225D849F4090A3A7AF /* Pods-Instabot FABUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instabot FABUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instabot FABUITests/Pods-Instabot FABUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6DDDEF11C90441915FE52C8 /* Pods_FABUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FABUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FB6FCD2737E80826D95B85 /* Pods-FABUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FABUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FABUITests/Pods-FABUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D5B77773EA8D052E254F48E9 /* Pods-Instabot FAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instabot FAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instabot FAB/Pods-Instabot FAB.release.xcconfig"; sourceTree = "<group>"; };
+		E07ED651809280EC38C770D5 /* Pods-Instabot FAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instabot FAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instabot FAB/Pods-Instabot FAB.debug.xcconfig"; sourceTree = "<group>"; };
 		E59C351DFB6849E19D6303F0 /* Pods-FAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-FAB/Pods-FAB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +71,7 @@
 			files = (
 				233BA74F1FA26CCA007A252F /* SafariServices.framework in Frameworks */,
 				BA7E9E04A9E1FBF42A2F6EE2 /* Pods_FAB.framework in Frameworks */,
+				323D88E5C5DBD3174891A1AC /* Pods_Instabot_FAB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D19A9B6D24BEECED127936 /* Pods_FABUITests.framework in Frameworks */,
+				7617F9022DAB815127FB3BA1 /* Pods_Instabot_FABUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +164,8 @@
 				233BA74E1FA26CCA007A252F /* SafariServices.framework */,
 				72CD2E50A42B06C76E5C505E /* Pods_FAB.framework */,
 				A6DDDEF11C90441915FE52C8 /* Pods_FABUITests.framework */,
+				46AAD2BB88C8F5FDBA092E58 /* Pods_Instabot_FAB.framework */,
+				4AB4CC0DE86A06451A4D4552 /* Pods_Instabot_FABUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,6 +177,10 @@
 				E59C351DFB6849E19D6303F0 /* Pods-FAB.release.xcconfig */,
 				1C5CA5BD2F9CB08B3D79B91F /* Pods-FABUITests.debug.xcconfig */,
 				C1FB6FCD2737E80826D95B85 /* Pods-FABUITests.release.xcconfig */,
+				E07ED651809280EC38C770D5 /* Pods-Instabot FAB.debug.xcconfig */,
+				D5B77773EA8D052E254F48E9 /* Pods-Instabot FAB.release.xcconfig */,
+				9FF988225D849F4090A3A7AF /* Pods-Instabot FABUITests.debug.xcconfig */,
+				5AF3A6988DA9A75AA04A0841 /* Pods-Instabot FABUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -281,7 +296,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FAB/Pods-FAB-resources.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Instabot FAB/Pods-Instabot FAB-resources.sh",
 				"${PODS_ROOT}/Instabot/Instabot.framework/InstabotResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -290,7 +305,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FAB/Pods-FAB-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instabot FAB/Pods-Instabot FAB-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4AECBFC01BDB35E7EC449B26 /* [CP] Check Pods Manifest.lock */ = {
@@ -304,7 +319,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FAB-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Instabot FAB-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FABUITests/Pods-FABUITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instabot FABUITests/Pods-Instabot FABUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB86FC9F1E96DCD15D0B90D9 /* [CP] Check Pods Manifest.lock */ = {
@@ -337,7 +352,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FABUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Instabot FABUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,7 +371,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FAB/Pods-FAB-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instabot FAB/Pods-Instabot FAB-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE40766D024537A62872BA32 /* [CP] Copy Pods Resources */ = {
@@ -371,7 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FABUITests/Pods-FABUITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Instabot FABUITests/Pods-Instabot FABUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -536,7 +551,7 @@
 		};
 		37B0DCDC1F8BA31600F6C0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C1B44557AE60B39FE928497 /* Pods-FAB.debug.xcconfig */;
+			baseConfigurationReference = E07ED651809280EC38C770D5 /* Pods-Instabot FAB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -554,7 +569,7 @@
 		};
 		37B0DCDD1F8BA31600F6C0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E59C351DFB6849E19D6303F0 /* Pods-FAB.release.xcconfig */;
+			baseConfigurationReference = D5B77773EA8D052E254F48E9 /* Pods-Instabot FAB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -572,7 +587,7 @@
 		};
 		37B0DCDF1F8BA31600F6C0F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C5CA5BD2F9CB08B3D79B91F /* Pods-FABUITests.debug.xcconfig */;
+			baseConfigurationReference = 9FF988225D849F4090A3A7AF /* Pods-Instabot FABUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -589,7 +604,7 @@
 		};
 		37B0DCE01F8BA31600F6C0F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1FB6FCD2737E80826D95B85 /* Pods-FABUITests.release.xcconfig */;
+			baseConfigurationReference = 5AF3A6988DA9A75AA04A0841 /* Pods-Instabot FABUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -20,7 +20,7 @@ typedef  NS_ENUM(NSInteger, ROKOConversationValueFormat) {
 	ROKOConversationValueFormatPhoneNumber
 };
 
-@interface IBConversationCustomProperty : IBDataItem
+@interface IBConversationCustomProperty : IBDataItem<NSCopying>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) ROKOConversationFieldType fieldType;

@@ -13,10 +13,10 @@
 
 @interface IBConversationBackgroundScheme : IBScheme
 
-@property (nullable, nonatomic, strong) NSString*       color;
-@property (nullable, nonatomic, strong) NSNumber*       opacity;
-@property (nullable, nonatomic, strong) NSString*       image;
-@property (nonatomic) IBBackgroundImageRepeatMode     repeat;
-@property (nonatomic) IBBackgroundImagePosition    position;
+@property (nullable, nonatomic, strong) NSString* color;
+@property (nullable, nonatomic, strong) NSNumber* opacity;
+@property (nullable, nonatomic, strong) NSString* image;
+@property (nonatomic) IBBackgroundImageRepeatMode repeat;
+@property (nonatomic) IBBackgroundImagePosition   position;
 
 @end
